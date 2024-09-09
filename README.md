@@ -2,6 +2,9 @@
 
 ## Introduction
 
+This repo provides the implementation of ClusMatch: Improving Deep Clustering by Unified Positive and Negative Pseudo-label Learning.
+
+<iframe src="/home/lizihan/github_ClusMatch/ClusMatch/figures/framework.pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
 
 
 
