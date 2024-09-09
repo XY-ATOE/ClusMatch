@@ -4,14 +4,16 @@
 
 This repo provides the implementation of ClusMatch: Improving Deep Clustering by Unified Positive and Negative Pseudo-label Learning.
 
-### Framework
+#### Framework
 <img src=figures/framework.png>
 
-### Main Results
+#### Main Results
 <img src=figures/main_tabel.png>
 
+## Trainging
 
-## Preparing Environment
+
+#### Preparing Environment
 
 use pip to install required packages:
 
@@ -19,13 +21,13 @@ use pip to install required packages:
 pip install -r requirements.txt
 ```
 
-## Preparing Pre-trained Model
+#### Preparing Pre-trained Model
 
 Our method requires pre-trained models and there are some training logs and pretrained models.
 [Google Drive](https://drive.google.com/drive/folders/1yGhOTJFkF0pSr2m_vwOnhiWtVmzsXPTE?usp=drive_link)
 
 
-## Training
+#### Training Commands
 
 ```sh
 # ProPos+CIFAR-10+ResNet-18
