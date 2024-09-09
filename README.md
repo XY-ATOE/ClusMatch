@@ -23,7 +23,9 @@ pip install -r requirements.txt
 
 #### Preparing Pre-trained Model
 
-Our method requires pre-trained models and there are some training logs and pretrained models.
+Our method requires pre-trained models and there are some training logs and pre-trained models.
+﻿
+You need to download the checkpoints under the 'pretrain' path and fill in 'load_path' in configs.
 
 [Google Drive](https://drive.google.com/drive/folders/1yGhOTJFkF0pSr2m_vwOnhiWtVmzsXPTE?usp=drive_link)
 
