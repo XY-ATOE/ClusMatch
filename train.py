@@ -204,8 +204,7 @@ def main(args):
     # distributed: true if manually selected or if world_size > 1
     args.distributed = args.world_size > 1 or args.multiprocessing_distributed
     ngpus_per_node = torch.cuda.device_count()  # number of gpus of each node
-    #import pdb
-    #pdb.set_trace()
+    
     if args.multiprocessing_distributed:
         # now, args.world_size means num of total processes in all nodes
         args.world_size = ngpus_per_node * args.world_size
@@ -291,12 +290,6 @@ def main_worker(gpu, ngpus_per_node, args):
     model.ema_model = model.set_ema_model()
     
     
-    #tmp={}
-    #for u,v in checkpoint.items():
-    #    tmp[u[7:]]=v
-    #print(model.model.load_state_dict(tmp,strict=False))
-
-
     # SET Devices for (Distributed) DataParallel
     model.model = send_model_cuda(args, model.model)
     model.ema_model = send_model_cuda(args, model.ema_model, clip_batch=False)
@@ -310,13 +303,14 @@ def main_worker(gpu, ngpus_per_node, args):
             logger.info("Fail to resume load path {}".format(args.load_path))    
             args.resume = False
     else:
-        logger.info("Resume load path {} does not exist".format(args.load_path))
+        # logger.info("Resume load path {} does not exist".format(args.load_path))
+        pass
 
     if hasattr(model, 'warmup'):
         logger.info(("Warmup stage"))
         model.warmup()
     
-    # START TRAINING of FixMatch
+    # START TRAINING 
     logger.info("Model training")
     print(model)
     
