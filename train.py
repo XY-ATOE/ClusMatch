@@ -39,7 +39,7 @@ def get_config():
     parser.add_argument('--use_aim', action='store_true', help='Use aim to plot and save curves')
 
     '''
-    Training Configuration of FixMatch
+    Training Configuration
     '''
     parser.add_argument('--epoch', type=int, default=1)
     parser.add_argument('--num_train_iter', type=int, default=20,
